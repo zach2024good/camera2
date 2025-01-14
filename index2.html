@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Photo Uploader</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    #photo-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border: 2px solid #ccc;
+    }
+    button, select {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Project Photo Uploader</h1>
+
+  <label for="project-select">Choose a Project:</label>
+  <select id="project-select">
+    <option value="">Select a Project</option>
+    <option value="Project A">testing1</option>
+    <option value="Project B">testing2</option>
+    <option value="Project C">testing3</option>
+  </select>
+
+  <video id="camera" autoplay playsinline></video>
+  <button id="capture">Capture Photo</button>
+  <div id="photo-container"></div>
+  <button id="upload">Upload to Airtable</button>
+
+  <script src="camera2.js"></script>
+</body>
+</html>
